@@ -18,3 +18,9 @@ jobs:
           echo "Checking website..."
           test -f index.html
           echo "index.html exists"
+
+       - name: Test website content
+        run: |
+          grep -q "<html" index.html
+          grep -q "DevOps" index.html
+          echo "Website content test passed"
