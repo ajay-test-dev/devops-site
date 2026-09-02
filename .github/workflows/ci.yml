@@ -1,0 +1,20 @@
+name: DevOps CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check website files
+        run: |
+          echo "Checking website..."
+          test -f index.html
+          echo "index.html exists"
