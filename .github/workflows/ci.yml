@@ -16,6 +16,6 @@ jobs:
       - name: Check website files
         run: |
           echo "Checking website..."
-          test -f index.html
+          test -f does-not-exist.html
           echo "index.html exists"
 
